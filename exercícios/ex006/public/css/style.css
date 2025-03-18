@@ -1,0 +1,20 @@
+body {
+        font: normal 18pt Arial;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+main {
+        background-color: #009dff;
+        width: 500px;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+}
+input {
+        font: normal 18pt Arial;
+        width: 100px;
+}
+#res {
+        margin-top: 20px;
+}
