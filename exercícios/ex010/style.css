@@ -1,0 +1,11 @@
+body {
+    background: rgb(68, 125, 199);
+    font: normal 18pt Arial;
+}
+div {
+    width: 80%;
+    height: 75%;
+    border-bottom: 20px;
+    align-items: column;
+    justify-content: center;
+}
