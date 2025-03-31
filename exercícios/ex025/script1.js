@@ -10,6 +10,7 @@ function main() {
     const { name, idade, isProgrammer } = person;
     console.log(name, idade, isProgrammer)
 };
+
 main();
 
 
