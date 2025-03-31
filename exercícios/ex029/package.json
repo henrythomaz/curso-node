@@ -1,0 +1,14 @@
+{
+  "name": "ex029",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/script.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
