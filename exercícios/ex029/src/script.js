@@ -1,24 +1,10 @@
-// Caminhos
+// Scripts
 
-import { som } from "./functions/math/som.js"
-import { sub } from "./functions/math/sub.js"
+    // nos scripts nós podemos adicionar --env-file e criar uma arquivo .env na raiz do projeto para na hora que eu dar um push pro github por exemplo ele não levar informações sensíveis
+    // Todo script para ser executado tem que usar npm run nome-do-script a não ser o script start em específico que usar também com run mas normalmente só npm start
+    // Ctrl + c finaliza o processo
 
-const a = 1;
-const b = 3;
-const adi = som(a, b);
-const subt = sub(a, b);
-console.log(`A soma da adição entre ${a} e ${b} é: ${adi} e a da subtração é: ${subt}`)
-
-// Caminhos Relativos:
-
-    /*
-        ./ Mesma pasta
-        ../ Volta uma pasta
-        ../../ Volta duas pastas
-        ./folder/ Entra em uma pasta
-        ../out/ Volta uma pasta e entra em outra
-        ./file.js Acessa um arquivo
-        ./folder/file.js Acessa um arquivo dentro de uma pasta
-        ../folder/file.js Volta uma pasta, entra em outra pasta e acessao arquivo
-        ../../file.js Volta duas pasta e acessa o arquivo
-    */
+    function som(a = 0, b = 0) {
+        return a + b
+    }
+console.log(som(5, 7))

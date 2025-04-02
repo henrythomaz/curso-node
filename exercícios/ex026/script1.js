@@ -1,16 +1,16 @@
-// Módulos 
+// Desestruturação
 
-    // Sintaxe CommonJS
+function main() {
+    const person = {
+        name: "Henry",
+        idade: 15,
+        isProgrammer: true
+    };
+    // const name = person.name; X
+    const { name, idade, isProgrammer } = person;
+    console.log(name, idade, isProgrammer)
+};
 
-        // Sem a desestruturação
+main();
 
-        const math = require("./functions/math1")
-        console.log(math.som(68, 10))
-        
-        // Com a desestruturação
 
-        const { som, sub } = require("./functions/math1")
-        const { catEmoji } = require("./constantes/emojis")
-
-        console.log(`${som(10, 39)} ${catEmoji}`)
-        console.log(`${sub(30, 5)} ${catEmoji}`)

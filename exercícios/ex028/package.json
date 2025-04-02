@@ -1,15 +1,17 @@
 {
-  "name": "ex028",
+  "name": "ex027",
   "version": "1.0.0",
   "type": "module",
-  "main": "src/script.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/script.js",
-    "watch": "node --watch src/script.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "@clack/prompts": "^0.10.0",
+    "chalk": "^5.4.1"
+  }
 }

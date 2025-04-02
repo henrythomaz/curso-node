@@ -1,0 +1,1 @@
+import "./executável/hello.js"

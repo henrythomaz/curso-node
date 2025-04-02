@@ -1,7 +1,11 @@
-// Módulos
+// Desestruturação de Array
 
-    // Síntaxe ES Modules
+function Main() {
+    const colors = ["VERDE", "AMARELO", "AZUL", "ROSA", "LARANJA"]
 
-    import { som, sub } from "./functions/math2.js"
+    const [c1, c2, c3, c5] = colors
 
-    console.log(som(5, 10), sub(10, 5))
+    console.log(c1, c3, c5);
+};
+
+Main();
