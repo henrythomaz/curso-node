@@ -1,0 +1,16 @@
+{
+  "name": "ex036",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "script1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Henry <henrytoliveriacampos@gmail.com>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@clack/prompts": "^0.10.1"
+  }
+}
