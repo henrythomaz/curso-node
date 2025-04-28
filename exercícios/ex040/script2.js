@@ -10,12 +10,21 @@ const users = new Map([
 ]);
 
 console.log(users);
-
+    // Métodos:
+    /*
+        - delete (deleta uma tupla)
+        - size (mostra o tamanho do map)
+        - has (verifica se existe uma tupla com aquela chave)
+        - entries (retorna as entradas das tuplas do map para um for)
+        - keys (retorna as chaves das tuplas do map)
+        - values (retorna as propriedades das tuplas do map)
+        - forEach (passa uma função pra cada tupla)
+    */
 users.delete("Alyson");
 
 console.log(users);
 console.log(users.size);
-console.log(users.has("Arthur"));
+console.log(users.has("Alyson"));
 
 for (const [ key, value ] of users.entries()) {
     console.log("A chave é:", key);
@@ -32,3 +41,4 @@ users.forEach(user => {
 })
 
 // Lembra que o map não pode ter itens duplicados!
+// DICA - Passe todos os valores sendo do mesmo tipo
