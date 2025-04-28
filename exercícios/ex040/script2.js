@@ -30,3 +30,5 @@ for (const value of users.values()) {
 users.forEach(user => {
     console.log(user)
 })
+
+// Lembra que o map não pode ter itens duplicados!
