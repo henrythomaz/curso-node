@@ -1,0 +1,16 @@
+{
+  "name": "ex039",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@clack/prompts": "^0.10.0"
+  },
+  "main": "script1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
