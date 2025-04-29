@@ -39,7 +39,7 @@ export const taskManager = {
             case "em andamento":
                 return chalk.bgHex("#ffb449")(`${status}`);
             case "concluída":
-                return chalk.bgHex("#02ff91")(`${status}`);
+                return chalk.bgGreen(`${status}`);
             case "cancelada":
                 return chalk.bgHex("#ff003f")(`${status}`);
             default:
