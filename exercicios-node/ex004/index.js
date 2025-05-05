@@ -13,7 +13,7 @@ let costumers = [
 ];
 
 server.get("/costumers", (req, res) => {
-    return res.json(costumers)
+    return res.json(costumers);
 });
 
 server.get("/costumers/:id", (req, res) => {
@@ -49,7 +49,6 @@ server.put("/costumers/:id", (req, res) => {
 
 server.delete("/costumers/:id", (req, res) => {
     const id = parseInt(req.params.id);
-    const { name, site } = req.body;
 
     const index = costumers.findIndex(item => item.id === id);
     const status = index ? 200 : 404;
