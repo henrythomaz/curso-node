@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "@clack/prompts": "^0.10.0"
+    "@clack/prompts": "^0.10.0",
+    "ex039": "file:"
   },
   "main": "script1.js",
   "scripts": {
