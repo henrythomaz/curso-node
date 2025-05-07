@@ -1,0 +1,17 @@
+{
+  "name": "ex007",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node ./src/server.js",
+    "start": "yarn server",
+    "dev": "nodemon ./src/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
