@@ -1,4 +1,4 @@
-const { route } = require("../../app");
+// ** Deixando tudo mais moderno --dependências--
 
 let customers = [
     { id: 1, name: "GitHub", site: "https://github.com" },
@@ -9,49 +9,49 @@ let customers = [
 class CustomersController
 {
     // Mostra todos os customers
-    show(req, res) {
+    index(req, res) {
         return res.json(customers);
     };
     // Mostra um customer em específico
-    index(req, res) {
+    show(req, res) {
         const id = parseInt(req.params.id);
-        const index = customers.find(item => item.id === id);
-        const status = index >= 0 ? 200 : 404;
+        const customer = customers.find(item => item.id === id);
+        const status = customer >= 0 ? 200 : 404;
 
-        res.status(status).json(index);
+        return res.status(status).json(customer);
     };
     // Cria um customer
     create(req, res) {
-        const id = customers[customers.length -1].id + 1;
         const { name, site } = req.body;
+        const id = customers[customers.length -1].id + 1;
         const newCustomer = { id: id, name: name, site: site };
         customers.push(newCustomer);
 
-        res.status(201).json(customers);
+        return res.status(201).json(customers);
     };
     // Atualiza um customer
     update(req, res) {
-        const id = req.params.id;
+        const id = parseInt(req.params.id);
         const { name, site } = req.body;
         const index = customers.findIndex(item => item.id === id);
         const status = index >= 0 ? 200 : 404;
         
         if(status === 200) {
-            costumers[index] = { id: id, name, site };
+            customers[index] = { id: id, name, site };
         }
 
-        return res.status(status).json(costumers[index]);
+        return res.status(status).json(customers[index]);
     };
     // Deleta um customer
-    delete(req, res) {
-        const id = req.params.id;
-        const index = costumers.findIndex(item => item.id === id);
+    destroy(req, res) {
+        const id = parseInt(req.params.id);
+        const index = customers.findIndex(item => item.id === id);
         const status = index >= 0 ? 200 : 404;
 
         if(status === 200) {
-            costumers.splice(index, 1);
+            customers.splice(index, 1);
         };
 
         res.status(status).json(customers);
     };
-} module.exports = new CustomersController();
+} export default new CustomersController();
