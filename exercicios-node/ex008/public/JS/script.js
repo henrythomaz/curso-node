@@ -7,7 +7,12 @@ btn.addEventListener('click', () => {
 function enviarLink() {
   const link = document.getElementById("link").value;
   const name = document.getElementById("name").value;
-  const res = document.getElementById("res").value;
+  const res = document.getElementById("res");
 
-  
+  res.innerHTML += `
+  <div id="sites">
+    <h1>${name}</h1>
+    <h2>${link}</h2>
+  </div>
+  `
 }
