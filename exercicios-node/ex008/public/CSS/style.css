@@ -1,6 +1,6 @@
 body {
     background: rgb(107, 107, 241);
-    font: normal 18pt Arial;
+    font: normal 16pt Arial;
 }
 header {
     color: white;
@@ -14,14 +14,20 @@ main {
     margin: auto;
     box-shadow: 3px 3px 18px rgb(0, 0, 0, 363);
 }
-#foto, #msg {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+#sites {
+  background: #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  padding: 0px 10px 0px;
+  margin: 10px;
 }
-#foto {
-    margin-top: 10px;
+h2 {
+  font-size: 25px;
+}
+#sites, p {
+  padding-left: 10px;
+
 }
 footer {
     color: white;
