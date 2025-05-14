@@ -2,6 +2,7 @@
   "name": "ex008",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "server": "node ./src/server.js",
     "start": "yarn server",

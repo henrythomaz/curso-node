@@ -11,6 +11,7 @@ function enviarLink() {
 
   res.innerHTML += `
   <div id="sites">
+    <span></span>
     <h2>${name}</h2>
     <p>${link}</p>
   </div>

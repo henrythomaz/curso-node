@@ -1,20 +1,28 @@
+// app.js
 import express from "express";
-import routes from "./routes.js"
+import path from "path";
+import { fileURLToPath } from "url";
+import routes from "./routes.js";
 
-class App
-{
-    constructor() {
-        this.server = express();
-        this.middlewares();
-        this.routes();
-    };
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
-    middlewares() {
-        this.server.use(express.json());
-    };
+class App {
+  constructor() {
+    this.server = express();
+    this.middlewares();
+    this.routes();
+  }
 
-    routes() {
-        this.server.use(routes)
-    };
+  middlewares() {
+    this.server.use(express.json());
 
-} export default new App().server;
+    this.server.use(express.static(path.resolve(__dirname, "..", "public")));
+  }
+
+  routes() {
+    this.server.use(routes);
+  }
+}
+
+export default new App().server;
