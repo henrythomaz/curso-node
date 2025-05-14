@@ -29,6 +29,11 @@ h2 {
   padding-left: 10px;
 
 }
+#lixeira {
+  width: 20px;
+  height: auto;
+  padding: 0% 2% 10%;
+}
 footer {
     color: white;
     text-align: center;
