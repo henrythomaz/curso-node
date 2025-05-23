@@ -1,41 +1,54 @@
 body {
-    background: rgb(107, 107, 241);
-    font: normal 16pt Arial;
+  background: rgb(107, 107, 241);
+  font: normal 16pt Arial;
 }
+
 header {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
+
 main {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    width: 500px;
-    margin: auto;
-    box-shadow: 3px 3px 18px rgb(0, 0, 0, 363);
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  width: 500px;
+  margin: auto;
+  box-shadow: 3px 3px 18px rgba(0, 0, 0, 0.25);
 }
-#sites {
+
+.site {
+  position: relative;
   background: #ccc;
   border-radius: 10px;
   display: flex;
-  flex-direction: row;
-  padding: 0px 10px 0px;
-  margin: 10px;
+  flex-direction: column;
+  padding: 10px;
+  margin: 10px 0;
 }
-h2 {
-  font-size: 25px;
-}
-#sites, p {
-  padding-left: 10px;
 
+.site h2 {
+  font-size: 22px;
+  margin: 0;
 }
-#lixeira {
-  width: 20px;
+
+.site p {
+  margin: 5px 0;
+  padding-left: 10px;
+}
+
+.lixeira {
+  width: 24px;
   height: auto;
-  padding: 0% 2% 10%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
+
 footer {
-    color: white;
-    text-align: center;
-    font-style: italic;
+  color: white;
+  text-align: center;
+  font-style: italic;
+  margin-top: 20px;
 }

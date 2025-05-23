@@ -35,7 +35,7 @@ class CustomersController
         const { name, site } = req.body;
         const index = customers.findIndex(item => item.id === id);
         const status = index >= 0 ? 200 : 404;
-        
+
         if(status === 200) {
             customers[index] = { id: id, name, site };
         }
@@ -51,7 +51,6 @@ class CustomersController
         if(status === 200) {
             customers.splice(index, 1);
         };
-
         res.status(status).json(customers);
     };
 } export default new CustomersController();

@@ -18,6 +18,7 @@ class CustomersController
     };
     create(req, res) {
         const { name, site } = req.body;
+        console.log("Recebido:", name, site);
         const id = customers[customers.length -1].id + 1;
         const newCustomer = { id: id, name: name, site: site };
         customers.push(newCustomer);
