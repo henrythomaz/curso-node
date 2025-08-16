@@ -1,6 +1,6 @@
 export default {
   async up(queryInterface, Sequelize) {
-    return queryInterface.createTable("contact", {
+    return queryInterface.createTable("contacts", {
       id: {
         type: Sequelize.INTEGER,
         allownull: false,
@@ -24,10 +24,17 @@ export default {
         type: Sequelize.DATE,
         allowNull: false,
       },
+      customer_id: {
+        type: Sequelize.INTEGER,
+        references: { model: "customers", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
+        allowNull: false,
+      },
     });
   },
 
   async down(queryInterface) {
-    return queryInterface.dropTable("users");
+    return queryInterface.dropTable("contacts");
   },
 };

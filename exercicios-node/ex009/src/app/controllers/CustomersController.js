@@ -1,4 +1,4 @@
-import Customer from "../models/Customer";
+import Customer from "../models/Customer.js";
 
 class CustomersController {
   async index(req, res) {
@@ -9,3 +9,4 @@ class CustomersController {
   }
 }
 export default new CustomersController();
+

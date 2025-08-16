@@ -9,6 +9,7 @@ export default {
       },
       name: {
         type: Sequelize.STRING,
+        allowNull: false,
       },
       email: {
         type: Sequelize.STRING,
@@ -21,13 +22,6 @@ export default {
       },
       updated_at: {
         type: Sequelize.DATE,
-        allowNull: false,
-      },
-      customer_id: {
-        type: Sequelize.INTEGER,
-        references: { model: "customers", key: "id" },
-        onUpdate: "CASCADE",
-        onDelete: "CASCADE",
         allowNull: false,
       },
     });

@@ -1,21 +1,43 @@
 import Sequelize from "sequelize";
-
 import config from "../config/database.cjs";
 
+// Importe todos os modelos
 import Customer from "../app/models/Customer.js";
 import Contact from "../app/models/Contact.js";
 import User from "../app/models/User.js";
 
-const models = [Customer, Contact, User];
-
 class Database {
   constructor() {
     this.connection = new Sequelize(config);
+    this.models = {
+      Customer,
+      Contact,
+      User
+    };
+    
+    this.initModels();
+
+    this.runAssociations();
   }
 
-  init() {
-    models.forEach((model) => model.init(this.connection));
+  initModels() {
+    Object.keys(this.models).forEach(modelName => {
+      const model = this.models[modelName];
+      if (typeof model.init === 'function') {
+        model.init(this.connection);
+      }
+    });
+  }
+
+  runAssociations() {
+    Object.keys(this.models).forEach(modelName => {
+      const model = this.models[modelName];
+      if (typeof model.associate === 'function') {
+        model.associate(this.models);
+      }
+    });
   }
 }
 
-export default Database;
+const database = new Database();
+export default database;
