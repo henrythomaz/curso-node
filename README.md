@@ -1,2 +1,2 @@
-# curso-node
-Eu vou fazer um mini curso de node só pra reforçar conteúdos
+# curso-fullStack
+Eu vou fazer um curso fullStack para estudar
